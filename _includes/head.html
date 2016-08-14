@@ -1,0 +1,44 @@
+<!-- head part -->
+<head>
+  <title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  <meta name="keywords" content="{% if page.keyword %}{{ page.keyword | escape }}{% else %}{{ site.keyword | escape }}{% endif %}" />
+
+  <link rel="stylesheet" href="{{ site.static_css | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ site.article_css | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ site.highlight_css | prepend: site.baseurl }}">
+  {% if page.extra_css %}
+  <link rel="stylesheet" href="{{ page.extra_css | prepend: site.baseurl }}">
+  {% endif %}
+
+  <script src="{{ site.static_js | prepend: site.baseurl }}"></script>
+
+  {% if page.extra_js %}
+  <script src="{{ page.extra_js | prepend: site.baseurl }}"></script>
+  {% endif %}
+
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+
+  {% if site.site_icon %}
+  <link rel="shortcut icon" href="{{ site.site_icon | prepend: site.baseurl }}">
+  {% endif %}
+
+  <!-- add Baidu Analytics -->
+  <script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "//hm.baidu.com/hm.js?d1a656eea8c4b3e580f6f547627ee232";
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm, s);
+  })();
+  </script>
+  <!-- end Baidu Analytics -->
+
+</head>

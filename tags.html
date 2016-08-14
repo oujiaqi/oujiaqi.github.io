@@ -1,0 +1,28 @@
+---
+layout: home
+title: Tags
+subtitle: 
+permalink: /tags/
+extra_css: /assets/css/calendar.css
+header_img: /assets/imgs/tags.jpg
+---
+
+<div class="tags-page">
+  <div class="all-tags">
+    {% for one in site.tags%}
+      <a href="/tags/#{{ one[0] }}" title="{{ one[0] }}" class="tag" rel="{{ one[1].size }}">{{ one[0] }}</a>
+    {% endfor %}
+  </div>
+  <div class="all-tags-links">
+  {% for one in site.tags %}
+    <div>
+      <!-- tag anchor -->
+      <a name="{{ one[0] }}"></a>
+      <h2>{{ one[0] }}</h2>
+      {% for a in one[1] %}
+      <p><a href="{{ a.url }}">{{ a.title }}</a></p>
+      {% endfor %}
+    </div>
+  {% endfor %}
+  </div>
+</div>

@@ -1,0 +1,64 @@
+# This is the site settings file.
+# You can modify this file to 
+# apply this template to your blog.
+# This template is build by oujiaqi.
+# If you have any question or suggestion,
+# You can contact me by email.
+# My email is 471884121@qq.com
+
+
+# Static meta
+author: Jiaqi Ou
+email: 471884121@qq.com
+
+
+# Site settings
+title: Sevener
+subtitle: 自在如风的少年 飞在天地间
+description: oujiaqi's blog, including naruto, basketball, book, love, poem and future, and 1024. a road to top.
+keyword: study,code,happiness
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://oujiaqi.github.io" # the base hostname & protocol for your site
+
+
+
+# Default configuration
+static_css: /assets/css/main.css
+article_css: /assets/css/article.css
+highlight_css: /assets/css/highlight.css
+static_js: /assets/js/main.js
+site_icon: /assets/imgs/site-icon.png
+header_img: /assets/imgs/header-img.jpg
+
+
+# SNS info
+github_username: oujiaqi
+
+
+
+# Build settings
+markdown: kramdown
+exclude: ["README.md"] # exclude files
+
+gems: [jekyll-paginate]
+paginate: 5
+
+
+
+# Recommended links
+links: [{
+        title: "智图压缩",
+        href: "http://zhitu.isux.us/"
+    },{
+        title: "动画工具",
+        href: "http://isux.tencent.com/css3/tools.html"
+    },{
+        title: "廖雪峰",
+        href: "http://www.liaoxuefeng.com/"
+    },{
+        title: "火影全集",
+        href: "http://www.dilidili.com/anime/naruto/story/"
+    },{
+        title: "Naruto",
+        href: "http://naruto-ten.com/"
+    }]

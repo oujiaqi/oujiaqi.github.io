@@ -1,0 +1,112 @@
+/* the wrapper style */
+/*.wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    font-size: 20px;
+}*/
+
+
+
+/* the calendar style */
+.calendar {
+    font-size: 1em;
+    text-align: center;
+    color: gray;
+    overflow: visible;
+}
+
+/* the control container style */
+.calendar-control {
+    padding-bottom: 7px;
+}
+
+/* the control button style */
+.calendar-control-prev {
+    float: left;
+}
+
+.calendar-control-next {
+    float: right;
+}
+
+.calendar-control-button {
+    font-size: 0.7em;
+    display: block;
+    width: 2em;
+    padding-bottom: 0.4em;
+    padding-top: 0.5em;
+    border-radius: 4em;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.calendar-control-button:hover {
+    background: #e0e0e0;
+}
+
+/* calendar control title */
+.calendar-control-title span {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+
+
+/* the table style */
+.calendar-table-container table {
+    width: 100%;
+}
+
+.calendar-table-container th {
+    width: 14.2857143%;
+    font-size: 0.8em;
+}
+
+.calendar-table-container td {
+    width: 14.2857143%;
+    padding-top: 0.4em;
+    padding-bottom: 0.4em;
+}
+
+/* the link style */
+.calendar table a{
+    display: block;
+    width: 1.4em;
+    padding-bottom: 0.14em;
+    padding-top: 0.24em;
+    border-radius: 3em;
+    margin-left: auto;
+    margin-right: auto;
+    text-decoration: none;
+    color: #9E9B9B;
+    cursor: default;
+}
+
+.calendar-date-link {
+    background: #e0e0e0;
+}
+
+.calendar-date-link:hover {
+    color: #fff;
+    background: #5c5c5c;
+    cursor: pointer;
+}
+
+/* today style */
+#calendar-today {
+    border: red 1px solid;
+    cursor: pointer;
+}
+
+
+/* add gradual animation */
+.calendar a {
+    transition: all 0.2s;
+    -moz-transition: all 0.2s;  /* Firefox 4 */
+    -webkit-transition: all 0.2s;   /* Safari 和 Chrome */
+    -o-transition: all 0.2s;    /* Opera */
+}
+
+
+
+

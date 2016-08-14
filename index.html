@@ -1,0 +1,61 @@
+---
+layout: home
+title: Home
+subtitle:
+extra_css: /assets/css/calendar.css
+---
+
+<div class="post-list-container">
+  <ul class="post-list">
+
+    {% for post in paginator.posts %}
+    <li>
+      <h2 class="post-list-title">
+        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+      </h2>
+      <p><span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span></p>
+      {% if post.tags.size > 0 %}
+      <p>Tags: 
+      {% for one in post.tags %}
+        <a href="{{ site.baseurl }}/tags/#{{ one }}" class="tag">{{ one }}</a>
+      {% endfor %}
+      </p>
+      {% endif %}
+      {% if post.catalog %}
+      <p>
+        Catalog: {{ post.catalog }}
+      </p>
+      {% endif %}
+      {% if post.excerpt %}
+      <p class="post-excerpt">
+        {% if post.excerpt.size > 120 %}
+        {{ post.excerpt | slice: 0, 120 }}...
+        {% else %}
+        {{ post.excerpt }}
+        {% endif %}
+      </p>
+      {% endif %}
+      <p>
+        <a href="{{ post.url | prepend: site.baseurl }}" class="read-all-button">read all...</a>
+      </p>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+
+<!-- Pager -->
+{% if paginator.total_pages > 1 %}
+<ul class="pager">
+    {% if paginator.previous_page %}
+    <li class="previous">
+        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; 上一页</a>
+    </li>
+    {% endif %}
+    {% if paginator.next_page %}
+    <li class="next">
+        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">下一页 &rarr;</a>
+    </li>
+    {% endif %}
+</ul>
+{% endif %}
+

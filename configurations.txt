@@ -1,0 +1,46 @@
+site:
+description: 网站描述
+keyword: 关键词(用于搜索)
+static_css: 静态css
+static_article_css: 默认文章css 全路径
+highlight_css: 默认高亮css 全路径
+static_js: 默认js 全路径
+icon: 图标 全路径
+
+header_img: 大图 全路径
+
+url: 文章url
+baseurl: 网站子路径 /blog
+
+title: 网站名
+
+tags: [a,b]
+
+posts: all article in post file
+
+links: [{"href":"href", "title":"title"}]
+
+
+page:
+excerpt: 文章摘要，120字左右 需要
+keyword: 关键词
+extra_css:
+extra_js:
+header_img: 大图 全路径
+
+nav_bool: 设置是否为导航页 true or false
+nav_order: 只有导航页面才添加，表示顺序
+
+title:
+subtitle:
+
+date:
+
+tags: []
+
+catalog: 分类
+
+category: 归档
+
+
+

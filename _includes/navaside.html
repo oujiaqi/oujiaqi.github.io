@@ -1,0 +1,41 @@
+<!-- site aside nav -->
+<aside class="aside-nav">
+	<div class="wrapper">
+
+		{% if site.tags.size > 0 %}
+		<!-- aside-nav-item tags  -->
+		<div class="tags aside-nav-item">
+			<h1 class="captial aside-nav-title">FEATURED TAGS</h1>
+			{% for one in site.tags%}
+			<a href="/tags/#{{ one[0] }}" title="{{ one[0] }}" class="tag" rel="{{ one[1].size }}">{{ one[0] }}</a>
+			{% endfor %}
+		</div>
+		<!-- end of aside-nav-item tags -->
+		{% endif %}
+
+		<!-- aside-nav-item calendar -->
+		<div class="calendar aside-nav-item">
+			<h1 class="captial aside-nav-title">CALENDAR</h1>
+			<div id="calendar-wrapper" class="wrapper">
+				{% for post in site.posts %}
+				<a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.date | date: "%Y-%m-%d" }}</a>
+				{% endfor %}
+			</div>
+			<script src="{{ site.baseurl }}/assets/js/calendar.js"></script>
+		</div>
+		<!-- end of aside-nav-item calendar -->
+
+		{% if site.links %}
+		<!-- aside-nav-item links -->
+		<div class="aside-nav-item">
+			<h1 class="captial aside-nav-title">LINKS</h1>
+			{% for one in site.links %}
+			<a href="{{ one['href'] }}" title="{{ one['title'] }}" class="re-links">{{ one['title'] }}</a>
+			{% endfor %}
+		</div>
+		<!-- end of aside-nav-item links -->
+		{% endif %}
+
+	</div>
+</aside>
+<!-- end of site aside nav -->

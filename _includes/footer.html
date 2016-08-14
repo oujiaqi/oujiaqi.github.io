@@ -1,0 +1,31 @@
+<!-- site-footer -->
+<footer class="site-footer">
+  <div class="wrapper">
+
+    <p>
+      <small>
+        Powered by <a href="https://github.com/jekyll/jekyll">Jekyll</a> on <a href="https://github.com">GitHub</a> © 2016 by <a href="https://oujiaqi.github.io">Jiaqi Ou</a>
+      </small>
+    </p>
+    {% if site.email %}
+    <p>
+      <small>
+        Contact <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+      </small>
+    </p>
+    {% endif %}
+    {% if site.github_username %}
+    <p>
+      <small>
+        {% include icon-github.html username=site.github_username %}
+      </small>
+    </p>
+    {% endif %}
+
+  </div>
+</footer>
+<!-- end of site-footer -->
+
+<!-- sroll button -->
+<a onclick="pageSroll()" id="scroll-to-top" class="hide-scroll-button"><img src="/assets/imgs/scroll-to-top.png" alt="Top" id="scroll-to-top-img"></a>
+<!-- end of sroll button -->
