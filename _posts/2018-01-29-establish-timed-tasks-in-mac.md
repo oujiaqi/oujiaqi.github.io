@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Mac下启动定时任务
-subtitle: 
+subtitle: Mac下启动定时任务
 date: '2018-01-29 20:54:24 +0800'
 catalog: study
 keyword: Mac 定时任务 crontab launchctl 自动化
@@ -10,13 +10,6 @@ tags: [Mac, bash]
 categories: articles study notes
 header_img: 
 ---
-
-# Mac下启动定时任务
-
-标签（空格分隔）： Mac
-
----
-
 
 Mac创建定时任务主要由两种方式：crontab命令和launchctl定时任务。
 
